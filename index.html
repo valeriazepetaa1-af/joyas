@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alma de Luna: accesorios para brillar a tu manera.">
+  <title>Alma de Luna | Accesorios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">ENVÍO GRATIS EN COMPRAS MAYORES A $699 MXN · NUEVA COLECCIÓN</div>
+  <header class="site-header">
+    <button class="icon-button mobile-menu" id="mobile-menu" aria-label="Abrir menú">☰</button>
+    <a class="brand" href="#inicio">alma <span>de luna</span><small>ACCESORIOS & MÁS</small></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#inicio">Inicio</a><a href="#catalogo">Comprar</a><a href="#coleccion">Colección</a><a href="#nosotros">Nosotros</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="search-focus" aria-label="Buscar">⌕</button>
+      <button class="icon-button" id="favorites-jump" aria-label="Favoritos">♡</button>
+      <button class="bag-button" id="open-cart">Bolsa <span id="bag-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">TU ESTILO, TU ESENCIA</span>
+        <h1>Brilla con tu<br><em>propia luz.</em></h1>
+        <p>Detalles que cuentan historias. Encuentra ese accesorio que habla de ti.</p>
+        <a class="button button-dark" href="#catalogo">DESCUBRIR COLECCIÓN <span>→</span></a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orbit"></div><div class="hero-seal">ADL<br><span>♡</span></div>
+        <p>THE LITTLE<br>THINGS MATTER</p>
+      </div>
+      <div class="hero-bottom">ALMA DE LUNA · EST. 2026</div>
+    </section>
+
+    <section class="benefits" aria-label="Beneficios">
+      <div><span>✧</span><p><b>Diseños especiales</b><small>Detalles para cada ocasión</small></p></div>
+      <div><span>♡</span><p><b>Compra fácil</b><small>Una experiencia sencilla</small></p></div>
+      <div><span>✦</span><p><b>Hecho para ti</b><small>Encuentra tu próximo favorito</small></p></div>
+    </section>
+
+    <section class="catalog section" id="catalogo">
+      <div class="section-top"><div><span class="eyebrow">ENCUENTRA TU FAVORITO</span><h2>La colección</h2></div><p>Pequeños detalles,<br>grandes momentos.</p></div>
+      <div class="catalog-tools">
+        <div class="category-list" id="category-list">
+          <button class="filter-chip selected" data-category="Todos">Todos</button>
+          <button class="filter-chip" data-category="Aretes">Aretes</button>
+          <button class="filter-chip" data-category="Collares">Collares</button>
+          <button class="filter-chip" data-category="Pulseras">Pulseras</button>
+          <button class="filter-chip" data-category="Anillos">Anillos</button>
+          <button class="filter-chip" data-category="Sets">Sets</button>
+        </div>
+        <div class="search-sort">
+          <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Buscar un producto..." aria-label="Buscar productos"></label>
+          <select id="sort-select" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="low">Menor precio</option><option value="high">Mayor precio</option><option value="name">Nombre A-Z</option></select>
+        </div>
+      </div>
+      <div class="result-line"><span id="result-count">10 productos</span><span>PRECIOS EN MXN</span></div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="no-results hidden" id="no-results">No encontramos productos con esa búsqueda. Intenta con otra palabra. ♡</p>
+    </section>
+
+    <section class="collection-banner" id="coleccion"><div><span class="eyebrow">UN TOQUE ESPECIAL</span><h2>Tu próxima pieza<br>favorita te espera.</h2><a href="#catalogo">EXPLORAR PRODUCTOS →</a></div><div class="banner-decoration">✧</div></section>
+
+    <section class="section favorites-section" id="favoritos"><span class="eyebrow">GUARDADOS PARA TI</span><h2>Tus favoritos <span class="pink">♡</span></h2><div class="product-grid" id="favorites-grid"></div><p class="empty-note" id="favorites-empty">Todavía no tienes favoritos. Presiona el corazón de cualquier producto para guardarlo.</p></section>
+
+    <section class="about section" id="nosotros"><div class="about-mark">ADL</div><div><span class="eyebrow">HOLA, SOMOS ALMA DE LUNA</span><h2>Un detalle puede<br>cambiarlo todo.</h2><p>Creemos que los accesorios son una forma de expresar quién eres. Creamos este espacio para que encuentres piezas que acompañen tu estilo y tus momentos especiales.</p><a href="#catalogo">CONOCE LA COLECCIÓN →</a></div></section>
+  </main>
+
+  <footer><a class="brand" href="#inicio">alma <span>de luna</span><small>ACCESORIOS & MÁS</small></a><p>Brilla con tu propia luz.</p><small>© 2026 Alma de Luna · Prototipo académico</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Bolsa de compras">
+    <div class="drawer-head"><div><span class="eyebrow">TU SELECCIÓN</span><h2>Mi bolsa <span id="drawer-count">(0)</span></h2></div><button class="close-button" id="close-cart" aria-label="Cerrar">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer"><div class="shipping-message" id="shipping-message">Agrega productos para comenzar.</div><div class="total-row"><span>Subtotal</span><b id="cart-subtotal">$0.00</b></div><div class="total-row"><span>Envío</span><b id="shipping-cost">$0.00</b></div><div class="total-row grand-total"><span>Total</span><b id="cart-total">$0.00</b></div><button class="button button-dark full-width" id="checkout-button">CONTINUAR COMPRA →</button><small>Compra de demostración. No se realizan cobros reales.</small></div>
+  </aside>
+
+  <section class="checkout-modal hidden" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <button class="close-button modal-close" id="close-checkout" aria-label="Cerrar">×</button>
+    <span class="eyebrow">CASI ES TUYO</span><h2 id="checkout-title">Finalizar compra</h2><p>Completa tus datos para generar un pedido de prueba.</p>
+    <form id="checkout-form"><label>Nombre completo<input name="name" required minlength="3" placeholder="Tu nombre"></label><label>Correo electrónico<input name="email" type="email" required placeholder="correo@ejemplo.com"></label><label>Dirección de entrega<input name="address" required minlength="5" placeholder="Calle, número, colonia y ciudad"></label><button class="button button-dark full-width" type="submit">CONFIRMAR PEDIDO DE PRUEBA</button></form>
+    <p class="form-note">Este prototipo no guarda datos bancarios ni procesa pagos.</p>
+  </section>
+
+  <button class="chat-launcher" id="chat-launcher"><span>✧</span> ¿Hablamos?</button>
+  <section class="chat-widget" id="chat-widget" aria-label="Chat con Luna">
+    <div class="chat-head"><div class="luna-avatar">☾</div><div><b>Luna</b><small>Asistente de Alma de Luna · En línea</small></div><button id="close-chat" aria-label="Cerrar chat">×</button></div>
+    <div class="chat-messages" id="chat-messages"><p class="bot-message">¡Hola! Soy Luna 🌙 Estoy aquí para ayudarte. Pregúntame por productos, precios, envíos o cómo comprar.</p><div class="quick-replies"><button data-message="¿Qué productos tienen?">Ver productos</button><button data-message="¿Cómo puedo comprar?">Cómo comprar</button></div></div>
+    <form id="chat-form"><input id="chat-input" placeholder="Escribe tu mensaje..." autocomplete="off" aria-label="Mensaje"><button type="submit" aria-label="Enviar">↑</button></form>
+  </section>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
