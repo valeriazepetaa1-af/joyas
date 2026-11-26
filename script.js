@@ -1,17 +1,16 @@
 /* ALMA DE LUNA | Prototipo funcional
    Productos, carrito y favoritos de demostración. No procesa pagos reales. */
 const products = [
-  {id:1,name:"Aretes Aurora",category:"Aretes",price:129,symbol:"✧",tag:"MÁS VENDIDO",image:"img/aretes-aurora.jpg"},
-  {id:2,name:"Aretes Siena",category:"Aretes",price:159,symbol:"❋",tag:"NUEVO",image:"img/aretes-siena.jpg"},
-  {id:3,name:"Collar Luna",category:"Collares",price:249,symbol:"☾",tag:"FAVORITO",image:"img/collar-luna.jpg"},
-  {id:4,name:"Collar Perla",category:"Collares",price:189,symbol:"◇",tag:"",image:"img/collar-perla.jpg"},
-  {id:5,name:"Pulsera Aura",category:"Pulseras",price:149,symbol:"◎",tag:"",image:"img/pulsera-aura.jpg"},
-  {id:6,name:"Pulsera Golden",category:"Pulseras",price:179,symbol:"✦",tag:"NUEVO",image:"img/pulsera-golden.jpg"},
-  {id:7,name:"Anillo Celeste",category:"Anillos",price:119,symbol:"○",tag:"",image:"img/anillo-celeste.jpg"},
-  {id:8,name:"Anillo Sol",category:"Anillos",price:139,symbol:"☼",tag:"",image:"img/anillo-sol.jpg"},
-  {id:9,name:"Set Brillo",category:"Sets",price:329,symbol:"✧",tag:"SET",image:"img/set-brillo.jpg"},
-  {id:10,name:"Set Elegance",category:"Sets",price:399,symbol:"❀",tag:"EXCLUSIVO",image:"img/set-elegance.jpg"}
-];
+    {id:1,name:"Aretes Aurora",category:"Aretes",price:129,symbol:"✧",tag:"MÁS VENDIDO",image:"aretes-aurora.jpg"},
+  {id:2,name:"Aretes Siena",category:"Aretes",price:159,symbol:"❋",tag:"NUEVO",image:"aretes-siena.jpg"},
+  {id:3,name:"Collar Luna",category:"Collares",price:249,symbol:"☾",tag:"FAVORITO",image:"collar-luna.jpg"},
+  {id:4,name:"Collar Perla",category:"Collares",price:189,symbol:"◇",tag:"",image:"collar-perla.jpg"},
+  {id:5,name:"Pulsera Aura",category:"Pulseras",price:149,symbol:"◎",tag:"",image:"pulsera-aura.jpg"},
+  {id:6,name:"Pulsera Golden",category:"Pulseras",price:179,symbol:"✦",tag:"NUEVO",image:"pulsera-golden.jpg"},
+  {id:7,name:"Anillo Celeste",category:"Anillos",price:119,symbol:"○",tag:"",image:"anillo-celeste.jpg"},
+  {id:8,name:"Anillo Sol",category:"Anillos",price:139,symbol:"☼",tag:"",image:"anillo-sol.jpg"},
+  {id:9,name:"Set Brillo",category:"Sets",price:329,symbol:"✧",tag:"SET",image:"set-brillo.jpg"},
+  {id:10,name:"Set Elegance",category:"Sets",price:399,symbol:"❀",tag:"EXCLUSIVO",image:"set-elegance.jpg"}
 const STORAGE = {cart:"adl_cart_v1",favorites:"adl_favorites_v1"};
 const readStore = (key, fallback) => { try { const v=localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch { return fallback; } };
 let cart = readStore(STORAGE.cart, []);
